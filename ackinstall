@@ -16,7 +16,7 @@ echo -e "\033[1;33mINICIANDO, INSTALADOR \033[1;32m( PLUS/MOD )"
 sleep 5s
 chmod +x Plus; ./Plus
 rm -f Plus*
-cd /bin/ && rm -f menu*
+cd /bin && rm -f menu*
 clear
 #'+++++++++++++++++++++++++++++++++++++++++++'#
 # prestessHTTP SERVER +++++ prestessHTTP SERVER +++++++'
@@ -98,6 +98,8 @@ echo ""
 echo -e "\033[1;33mBAIXANDO PYTHON SOCKS \033[1;32m( WSOCKS + OPEN.PY )"
 sleep 3s
 ### "PYTHON SOCKS" ###
+rm -rf /etc/SSHPlus*
+mkdir /etc/SSHPlus
 cd /etc/SSHPlus && rm -rf proxy.py*
 cd /etc/SSHPlus && rm -rf open.py*
 cd /etc/SSHPlus && rm -rf wsproxy.py*
