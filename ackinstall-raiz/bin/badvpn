@@ -40,12 +40,12 @@ echo -e "\033[0;34m------------------------------------"
             clear
             echo -e "\033[1;32mINICIANDO O BADVPN-UDP... \033[0m\n"
             fun_udpon () {
-                screen -dmS udpvpn /bin/badvpn-udpgw --endereco 127.0.0.1:7300 --maximo-clientes 16384 --maximo-conexoes-para-clientes 5 --cliente-socket-buffer 256 --udp-mtu 9000
+                screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 16384 --max-connections-for-client 5 --client-socket-sndbuff   256 --udp-mtu 9000
                 [[ $(grep -wc "udpvpn" /etc/autostart) = '0' ]] && {
-                    echo -e "ps x | grep 'udpvpn' | grep -v 'grep' || screen -dmS udpvpn /bin/badvpn-udpgw --endereco 127.0.0.1:7300 --maximo-clientes 16384 --maximo-conexoes-para-clientes 5 --cliente-socket-buffer 256 --udp-mtu 9000" >> /etc/autostart
+                    echo -e "ps x | grep 'udpvpn' | grep -v 'grep' || screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 16384 --max-connections-for-client 5 --client-socket-sndbuff   256 --udp-mtu 9000" >> /etc/autostart
                 } || {
                     sed -i '/udpvpn/d' /etc/autostart
-                    echo -e "ps x | grep 'udpvpn' | grep -v 'grep' || screen -dmS udpvpn /bin/badvpn-udpgw --endereco 127.0.0.1:7300 --maximo-clientes 16384 --maximo-conexao-para-clientes 5 --cliente-socket-buffer 256 --udp-mtu 9000" >> /etc/autostart
+                    echo -e "ps x | grep 'udpvpn' | grep -v 'grep' || screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 16384 --maximo-conexao-para-clientes 5 --client-socket-sndbuff   256 --udp-mtu 9000" >> /etc/autostart
                 }
                 sleep 1
             }
@@ -83,7 +83,7 @@ echo -e "\033[0;34m------------------------------------"
             echo -e "\033[1;33mINICIANDO O BADVPN-UDP NA PORTA \033[1;36m$porta\033[1;33m"
             fun_abrirptbad() {
                 sleep 1
-                screen -dmS udpvpn /bin/badvpn-udpgw --endereco 127.0.0.1:$porta --maximo-clientes 16384 --maximo-conexoes-para-clientes 5 --cliente-socket-buffer 256 --udp-mtu 9000
+                screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:$porta --max-clients 16384 --max-connections-for-client 5 --client-socket-sndbuff   256 --udp-mtu 9000
                 sleep 1
             }
             fun_abrirptbad
