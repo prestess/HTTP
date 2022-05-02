@@ -140,7 +140,7 @@ sleep 3s
 rm -rf /etc/slowdns*
 mkdir /etc/slowdns
 rm -f /bin/slowdns*
-cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/slowdns > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/slowdns > /dev/null 2>&1
 cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/dns-server > /dev/null  2>&1
 cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/remove-slow > /dev/null 2>&1
 cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/restartdns > /dev/null 2>&1
@@ -151,7 +151,7 @@ cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ack
 cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/slowdns-ssl > /dev/null 2>&1
 cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/startdns > /dev/null 2>&1
 cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/stopdns > /dev/null 2>&1
-cd /etc/slowdns && chmod +x slowdns
+cd /bin && chmod +x slowdns
 cd /etc/slowdns && chmod +x dns-server
 cd /etc/slowdns && chmod +x remove-slow
 cd /etc/slowdns && chmod +x restartdns
