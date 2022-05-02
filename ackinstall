@@ -7,7 +7,7 @@ rm -f Plus*
 clear
 echo -e "\033[1;33mBAIXANDO, INSTALADOR \033[1;32m( PLUS/MOD )"
 sleep 3s
-wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/Plus > /dev/null 2>&1
+wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/Plus > /dev/null 2>&1
 echo ""
 echo -e "\033[1;33mBAIXADO !"
 sleep 3s
@@ -79,18 +79,18 @@ echo "/swapfile   none    swap    sw    0   0" >> /etc/fstab
 echo ""
 echo -e "\033[1;33mBAIXANDO FERRAMENTAS \033[1;32m ( TUNING + SWAP MEMORY ETC ) "
 sleep 3s
-cd /bin/ && rm -f swapmemory*
-cd /bin/ && rm -f mtuning*
-cd /bin/ && rm -f atualizar*
-cd /bin/ && rm -f acksyshttpack*
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/mtuning > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/swapmemory > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/atualizar > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/acksyshttpack > /dev/null 2>&1
-cd /bin/ && chmod +x swapmemory
-cd /bin/ && chmod +x mtuning
-cd /bin/ && chmod +x atualizar
-cd /bin/ && chmod +x acksyshttpack
+cd /bin && rm -f swapmemory*
+cd /bin && rm -f mtuning*
+cd /bin && rm -f atualizar*
+cd /bin && rm -f acksyshttpack*
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/mtuning > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/swapmemory > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/atualizar > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/acksyshttpack > /dev/null 2>&1
+cd /bin && chmod +x swapmemory
+cd /bin && chmod +x mtuning
+cd /bin && chmod +x atualizar
+cd /bin && chmod +x acksyshttpack
 #'+++++++++++++++++++++++++++++++++++++++++++'#
 # prestessHTTP SERVER +++++ prestessHTTP SERVER +++++++'
 #'+++++++++++++++++++++++++++++++++++++++++++'#
@@ -101,8 +101,8 @@ sleep 3s
 cd /etc/SSHPlus && rm -rf proxy.py*
 cd /etc/SSHPlus && rm -rf open.py*
 cd /etc/SSHPlus && rm -rf wsproxy.py*
-cd /etc/SSHPlus && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/etc/SSHPlus/proxy.py > /dev/null 2>&1
-cd /etc/SSHPlus && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/etc/SSHPlus/open.py > /dev/null 2>&1
+cd /etc/SSHPlus && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/SSHPlus/proxy.py > /dev/null 2>&1
+cd /etc/SSHPlus && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/SSHPlus/open.py > /dev/null 2>&1
 cd /etc/SSHPlus && chmod +x proxy.py
 cd /etc/SSHPlus && chmod +x open.py
 #'+++++++++++++++++++++++++++++++++++++++++++'#
@@ -112,12 +112,12 @@ cd /etc/SSHPlus && chmod +x open.py
 echo ""
 echo -e "\033[1;33mBAIXANDO BADVPN-UDP \033[1;32m( BADVPN + BADVPN-UDPGW )"
 sleep 3s
-cd /bin/ && rm -f badvpn*
-cd /bin/ && rm -f badvpn-udpgw*
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/badvpn > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/badvpn-udpgw > /dev/null 2>&1
-cd /bin/ && chmod +x badvpn
-cd /bin/ && chmod +x badvpn-udpgw
+cd /bin && rm -f badvpn*
+cd /bin && rm -f badvpn-udpgw*
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/badvpn > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/badvpn-udpgw > /dev/null 2>&1
+cd /bin && chmod +x badvpn
+cd /bin && chmod +x badvpn-udpgw
 #'+++++++++++++++++++++++++++++++++++++++++++'#
 # prestessHTTP SERVER +++++ prestessHTTP SERVER +++++++'
 #'+++++++++++++++++++++++++++++++++++++++++++'#
@@ -125,9 +125,9 @@ cd /bin/ && chmod +x badvpn-udpgw
 echo ""
 echo -e "\033[1;33mBAIXANDO BOTSSH \033[1;32m( BOT TELEGRAM )"
 sleep 3s
-cd /bin/ && rm -f botssh
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/botssh > /dev/null 2>&1
-cd /bin/ && chmod +x botssh
+cd /bin && rm -f botssh
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/botssh > /dev/null 2>&1
+cd /bin && chmod +x botssh
 #'+++++++++++++++++++++++++++++++++++++++++++'#
 # prestessHTTP SERVER +++++ prestessHTTP SERVER +++++++'
 #'+++++++++++++++++++++++++++++++++++++++++++'#
@@ -138,18 +138,18 @@ sleep 3s
 rm -rf /etc/slowdns*
 mkdir /etc/slowdns
 rm -f /bin/slowdns*
-cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/etc/slowdns/slowdns > /dev/null 2>&1
-cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/etc/slowdns/dns-server > /dev/null  2>&1
-cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/etc/slowdns/remove-slow > /dev/null 2>&1
-cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/etc/slowdns/restartdns > /dev/null 2>&1
-cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/etc/slowdns/slowdns-drop > /dev/null 2>&1
-cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/etc/slowdns/slowdns-info > /dev/null 2>&1
-cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/etc/slowdns/slowdns-socks > /dev/null 2>&1
-cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/etc/slowdns/slowdns-ssh > /dev/null 2>&1
-cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/etc/slowdns/slowdns-ssl > /dev/null 2>&1
-cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/etc/slowdns/startdns > /dev/null 2>&1
-cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/etc/slowdns/stopdns > /dev/null 2>&1
-cd /bin/ && chmod +x slowdns
+cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/slowdns > /dev/null 2>&1
+cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/dns-server > /dev/null  2>&1
+cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/remove-slow > /dev/null 2>&1
+cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/restartdns > /dev/null 2>&1
+cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/slowdns-drop > /dev/null 2>&1
+cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/slowdns-info > /dev/null 2>&1
+cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/slowdns-socks > /dev/null 2>&1
+cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/slowdns-ssh > /dev/null 2>&1
+cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/slowdns-ssl > /dev/null 2>&1
+cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/startdns > /dev/null 2>&1
+cd /etc/slowdns && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/etc/slowdns/stopdns > /dev/null 2>&1
+cd /bin && chmod +x slowdns
 cd /etc/slowdns && chmod +x dns-server
 cd /etc/slowdns && chmod +x remove-slow
 cd /etc/slowdns && chmod +x restartdns
@@ -167,60 +167,60 @@ cd /etc/slowdns && chmod +x stopdns
 echo ""
 echo -e "\033[1;33mBAIXANDO LISTA \033[1;32m(MENU + CONEXAO + ETC)"
 sleep 3s
-cd /bin/ && rm -f conexao*
-cd /bin/ && rm -f menu*
-cd /bin/ && rm -f sshmonitor*
-cd /bin/ && rm -f criarusuario*
-cd /bin/ && rm -f uexpired*
-cd /bin/ && rm -f remover*
-cd /bin/ && rm -f criarteste*
-cd /bin/ && rm -f alterarlimite*
-cd /bin/ && rm -f alterarsenha*
-cd /bin/ && rm -f detalhes*
-cd /bin/ && rm -f infousers*
-cd /bin/ && rm -f expcleaner*
-cd /bin/ && rm -f banner*
-cd /bin/ && rm -f mudardata*
-cd /bin/ && rm -f delscript*
-cd /bin/ && rm -f senharoot*
-cd /bin/ && rm -f ovpn18*
-cd /bin/ && rm -f v2raymanager*
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/conexao > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/menu > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/sshmonitor > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/criarusuario > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/uexpired > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/remover > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/criarteste > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/alterarlimite > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/alterarsenha > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/detalhes > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/infousers > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/expcleaner > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/banner > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/mudardata > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/delscript > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/senharoot > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/ovpn18 > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/prestess/HTTP/ackinstall-raiz/bin/v2raymanager > /dev/null 2>&1
-cd /bin/ && chmod +x conexao
-cd /bin/ && chmod +x menu
-cd /bin/ && chmod +x sshmonitor
-cd /bin/ && chmod +x criarusuario
-cd /bin/ && chmod +x uexpired
-cd /bin/ && chmod +x remover
-cd /bin/ && chmod +x criarteste
-cd /bin/ && chmod +x alterarlimite
-cd /bin/ && chmod +x alterarsenha
-cd /bin/ && chmod +x detalhes
-cd /bin/ && chmod +x infousers
-cd /bin/ && chmod +x expcleaner
-cd /bin/ && chmod +x banner
-cd /bin/ && chmod +x mudardata
-cd /bin/ && chmod +x delscript
-cd /bin/ && chmod +x senharoot
-cd /bin/ && chmod +x ovpn18
-cd /bin/ && chmod +x v2raymanager
+cd /bin && rm -f conexao*
+cd /bin && rm -f menu*
+cd /bin && rm -f sshmonitor*
+cd /bin && rm -f criarusuario*
+cd /bin && rm -f uexpired*
+cd /bin && rm -f remover*
+cd /bin && rm -f criarteste*
+cd /bin && rm -f alterarlimite*
+cd /bin && rm -f alterarsenha*
+cd /bin && rm -f detalhes*
+cd /bin && rm -f infousers*
+cd /bin && rm -f expcleaner*
+cd /bin && rm -f banner*
+cd /bin && rm -f mudardata*
+cd /bin && rm -f delscript*
+cd /bin && rm -f senharoot*
+cd /bin && rm -f ovpn18*
+cd /bin && rm -f v2raymanager*
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/conexao > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/menu > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/sshmonitor > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/criarusuario > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/uexpired > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/remover > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/criarteste > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/alterarlimite > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/alterarsenha > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/detalhes > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/infousers > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/expcleaner > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/banner > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/mudardata > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/delscript > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/senharoot > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/ovpn18 > /dev/null 2>&1
+cd /bin && wget https://raw.githubusercontent.com/prestess/HTTP/main/ackinstall-raiz/bin/v2raymanager > /dev/null 2>&1
+cd /bin && chmod +x conexao
+cd /bin && chmod +x menu
+cd /bin && chmod +x sshmonitor
+cd /bin && chmod +x criarusuario
+cd /bin && chmod +x uexpired
+cd /bin && chmod +x remover
+cd /bin && chmod +x criarteste
+cd /bin && chmod +x alterarlimite
+cd /bin && chmod +x alterarsenha
+cd /bin && chmod +x detalhes
+cd /bin && chmod +x infousers
+cd /bin && chmod +x expcleaner
+cd /bin && chmod +x banner
+cd /bin && chmod +x mudardata
+cd /bin && chmod +x delscript
+cd /bin && chmod +x senharoot
+cd /bin && chmod +x ovpn18
+cd /bin && chmod +x v2raymanager
 #######################################
 #### "FIM" ####
 clear
