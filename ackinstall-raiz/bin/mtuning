@@ -1,0 +1,357 @@
+#!/bin/bash
+### BY GOD OF SKY  D
+### MODO ACKHTTP
+clear
+date=$(date '+%Y-%m-%d <> %H:%M:%S')
+echo -e "\033[0;32m       Otimizar Servidor VPS"
+echo -e "\033[0;34m------------------------------------"
+echo -e "\033[0;33m             Conexão"
+echo -e "\033[1;34m<\033[1;37m01 ×\033[1;34m> \033[1;33m\033[1;31m\033[1;37m[ Aumentar o Tamanho Do Buffer TCP ]\033[0;32m"
+echo -e "\033[1;34m<\033[1;37m02 ×\033[1;34m> \033[1;33m\033[1;31m\033[1;37m[ Melhorar Velocidade Download/Upload ] \033[0;32m"
+echo -e "\033[1;34m<\033[1;37m03 ×\033[1;34m> \033[1;33m\033[1;31m\033[1;37m[ Melhorar Desempenho SSH ] \033[0;32m"
+echo -e "\033[0;34m------------------------------------"
+echo -e "\033[0;33m             Sistema"
+echo -e "\033[1;34m<\033[1;37m04 ×\033[1;34m> \033[1;33m\033[1;31m\033[1;37m[ Melhorar Desempenho CPU ] \033[0;32m"
+echo -e "\033[1;34m<\033[1;37m05 ×\033[1;34m> \033[1;33m\033[1;31m\033[1;37m[ Melhorar Desempenho SSD/HDD ] \033[0;32m"
+echo -e "\033[1;34m<\033[1;37m06 ×\033[1;34m> \033[1;33m\033[1;31m\033[1;37m[ Aumentar Limites Do Kernel ] \033[0;32m"
+echo -e "\033[1;34m<\033[1;37m07 ×\033[1;34m> \033[1;33m\033[1;31m\033[1;37m[ Auto Limpar Cache Ram ] \033[0;32m"
+echo -e "\033[0;34m------------------------------------"
+echo -e "\033[0;33m               Dns"
+echo -e "\033[1;34m<\033[1;37m08 ×\033[1;34m> \033[1;33m\033[1;31m\033[1;37m[ Dns IPv4 Google ] \033[0;32m"
+echo -e "\033[1;34m<\033[1;37m09 ×\033[1;34m> \033[1;33m\033[1;31m\033[1;37m[ Dns Ipv4 OpenDns ] \033[0;32m"
+echo -e "\033[1;34m<\033[1;37m10 ×\033[1;34m> \033[1;33m\033[1;31m\033[1;37m[ Dns IPv4 Cloudflare ] \033[0;32m"
+echo -e "\033[0;34m------------------------------------"
+echo -e "\033[0;33m Testar Velocidade >> \033[1;37mspeedtest"
+echo -e "\033[0;33m Para Desativar Digite >> \033[1;37moff"
+echo -e "\033[0;33m Para Voltar Digite >> \033[1;37mmenu"
+echo -e "\033[0;34m------------------------------------\033[1;37m"
+echo ""
+###
+
+read x
+case "$x" in
+
+   1 | 01)
+   echo 262144 1572864 2097152 > /proc/sys/net/ipv4/udp_mem
+   echo 262144 1572864 2097152 > /proc/sys/net/ipv4/tcp_mem
+   echo 4194394 16777216 67108864 > /proc/sys/net/ipv4/tcp_rmem
+   echo 4194394 16777216 67108864 > /proc/sys/net/ipv4/tcp_wmem
+   echo 16777216 > /proc/sys/net/core/rmem_default
+   echo 67108864 > /proc/sys/net/core/wmem_default
+   echo 16777216 > /proc/sys/net/core/rmem_max
+   echo 67108864 > /proc/sys/net/core/wmem_max
+   echo 56623104 > /proc/sys/net/ipv4/udp_rmem_min
+   echo 56623104 > /proc/sys/net/ipv4/udp_wmem_min
+echo -n > /etc/sysctl.conf
+   echo "net.ipv4.udp_mem = 262144 1572864 2097152
+   net.ipv4.tcp_mem = 262144 1572864 2097152
+   net.ipv4.tcp_rmem = 4194394 16777216 67108864
+   net.ipv4.tcp_wmem = 4194394 16777216 67108864
+   net.core.rmem_default = 16777216
+   net.core.wmem_default = 67108864
+   net.core.rmem_max = 16777216
+   net.core.wmem_max = 67108864
+   net.ipv4.udp_rmem_min = 56623104
+   net.ipv4.udp_wmem_min = 56623104" > /etc/sysctl.conf
+sysctl -p /etc/sysctl.conf > /dev/null
+   echo -ne "\n\033[1;32m Opção \033[1;37m(01) \033[1;32m Definido !"
+echo ""
+echo ""
+echo ""
+echo -ne "\033[1;37mAperte Enter"; read
+cd /bin/ && mtuning
+   ;;
+  02 | 2)
+crontab -u root -l | grep -v '@reboot sleep 10s && cd /bin/ && tcpfast'  | crontab -u root -
+crontab -u root -l | grep -v '* * * * * ip -s -s neigh flush all'  | crontab -u root -
+crontab -u root -l | grep -v '* * * * * ip neigh flush dev lo'  | crontab -u root -
+cd /bin/ && rm -f tcpfast*
+cd /bin/ && rm -f acksyshttpack*
+cd /bin/ && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/tcpfast > /dev/null 2>&1
+cd /bin/ && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/acksyshttpack > /dev/null 2>&1
+cd /bin/ && chmod +x tcpfast
+cd /bin/ && chmod +x acksyshttpack
+tcpfast > /dev/null 2>&1
+acksyshttpack > /dev/null 2>&1
+(crontab -l; echo "@reboot sleep 10s && cd /bin/ && tcpfast") | crontab - > /dev/null 2>&1
+(crontab -l; echo "* * * * * ip -s -s neigh flush all") | crontab - > /dev/null 2>&1
+(crontab -l; echo "* * * * * ip neigh flush dev lo") | crontab - > /dev/null 2>&1
+/etc/init.d/cron > /dev/null 2>&1
+   echo -ne "\n\033[1;32m Opção \033[1;37m(02) \033[1;32m Definido !"
+echo ""
+echo ""
+echo ""
+echo -ne "\033[1;37mAperte Enter"; read
+cd /bin/ && mtuning
+   ;;
+03 | 3)
+echo -n > /etc/ssh/sshd_config
+echo "X11Forwarding yes" >> /etc/ssh/sshd_config
+echo "PrintMotd no" >> /etc/ssh/sshd_config
+echo "AcceptEnv LANG LC_*" >> /etc/ssh/sshd_config
+echo "Subsystem       sftp    /usr/lib/openssh/sftp-server" >> /etc/ssh/sshd_config
+echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+echo "Compression yes" >> /etc/ssh/sshd_config
+echo "UseDNS yes" >> /etc/ssh/sshd_config
+echo "UsePAM yes" >> /etc/ssh/sshd_config
+echo "Authenticationmethods password" >> /etc/ssh/sshd_config
+echo "Kexalgorithms diffie-hellman-group14-sha1" >> /etc/ssh/sshd_config
+echo "Ciphers aes128-ctr" >> /etc/ssh/sshd_config
+echo "MACs hmac-sha1" >> /etc/ssh/sshd_config
+echo "Fingerprinthash MD5" >> /etc/ssh/sshd_config
+echo "ClientAliveCountMax 15" >> /etc/ssh/sshd_config
+echo "ClientAliveInterval 30s" >> /etc/ssh/sshd_config
+echo "MaxStartups 20000" >> /etc/ssh/sshd_config
+echo "MaxSessions 20000" >> /etc/ssh/sshd_config
+echo "MaxAuthTries 20000" >> /etc/ssh/sshd_config
+echo "LoginGraceTime 0s" >> /etc/ssh/sshd_config
+echo "TCPKeepAlive yes" >> /etc/ssh/sshd_config
+echo "ipqos af21 cs1" >> /etc/ssh/sshd_config
+echo "Port 22" >> /etc/ssh/sshd_config
+service sshd reload /dev/null 2>&1
+echo -n > /etc/ssh/ssh_config
+echo "Host *" >> /etc/ssh/ssh_config
+echo "ControlMaster auto" >> /etc/ssh/ssh_config
+echo "ControlPath ~/.ssh/%r@%h:%p" >> /etc/ssh/ssh_config
+echo "ControlPersist 86400s" >> /etc/ssh/ssh_config
+echo "ConnectTimeout 86400s" >> /etc/ssh/ssh_config
+echo "Compression yes" >> /etc/ssh/ssh_config
+echo "ConnectionAttempts 86400s" >> /etc/ssh/ssh_config
+echo "Port 22" >> /etc/ssh/ssh_config
+echo "ChallengeResponseAuthentication yes" >> /etc/ssh/ssh_config
+echo "ClearAllForwardings yes" >> /etc/ssh/ssh_config
+echo "ExitOnForwardFailure yes" >> /etc/ssh/ssh_config
+echo "Pubkeyauthentication no" >> /etc/ssh/ssh_config
+echo "PreferredAuthentications=password" >> /etc/ssh/ssh_config
+echo "Kexalgorithms diffie-hellman-group14-sha1" >> /etc/ssh/ssh_config
+echo "Ciphers aes128-ctr" >> /etc/ssh/ssh_config
+echo "MACs hmac-sha1" >> /etc/ssh/ssh_config
+echo "Fingerprinthash MD5" >> /etc/ssh/ssh_config
+echo "ServerAliveCountMax 15" >> /etc/ssh/ssh_config
+echo "ServerAliveInterval 30s" >> /etc/ssh/ssh_config
+echo "TCPKeepAlive yes" >> /etc/ssh/ssh_config
+echo "ipqos af21 cs1" >> /etc/ssh/ssh_config
+service ssh reload /dev/null 2>&1
+echo -n > /etc/host.conf
+echo "order hosts,nospoof off,multi on,mdns on" >> /etc/host.conf
+echo -ne "\n\033[1;32m Opção \033[1;37m(03) \033[1;32m Definido !"
+echo ""
+echo ""
+echo ""
+echo -ne "\033[1;37mAperte Enter"; read
+cd /bin/ && mtuning
+    ;;
+  04 | 4)
+crontab -u root -l | grep -v '@reboot sleep 10s && cd /bin/ && rps_cpu'  | crontab -u root -
+cd /bin/ && rm -f rps_cpu*
+cd /bin/ && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/rps_cpu > /dev/null 2>&1
+cd /bin && chmod +x rps_cpu
+rps_cpu > /dev/null 2>&1
+(crontab -l; echo "@reboot sleep 10s && cd /bin/ && rps_cpu") | crontab - > /dev/null 2>&1
+/etc/init.d/cron > /dev/null 2>&1
+echo ""
+echo -ne "\n\033[1;32m Opção \033[1;37m(04) \033[1;32mDefinido !"
+echo ""
+echo ""
+echo ""
+echo -ne "\033[1;37mAperte Enter"; read
+cd /bin/ && mtuning
+     ;;
+05 | 5)
+crontab -u root -l | grep -v '@reboot sleep 10s && mount -o remount,noatime,nodiratime,nobarrier auto / && mount -o remount,noatime,nodiratime, auto /dev && mount -o remount,noatime,nodiratime, auto /proc && mount -o remount,noatime,nodiratime, auto /sys && mount -o remount,noatime,nodiratime,nobarrier auto /mnt'  | crontab -u root -
+mount -o remount,noatime,nodiratime,nobarrier auto / > /dev/null 2>&1
+mount -o remount,noatime,nodiratime, auto /dev > /dev/null 2>&1
+mount -o remount,noatime,nodiratime, auto /proc > /dev/null 2>&1
+mount -o remount,noatime,nodiratime, auto /sys > /dev/null 2>&1
+mount -o remount,noatime,nodiratime,nobarrier auto /mnt > /dev/null 2>&1
+(crontab -l; echo "@reboot sleep 10s && mount -o remount,noatime,nodiratime,nobarrier auto / && mount -o remount,noatime,nodiratime, auto /dev && mount -o remount,noatime,nodiratime, auto /proc && mount -o remount,noatime,nodiratime, auto /sys && mount -o remount,noatime,nodiratime,nobarrier auto /mnt") | crontab - > /dev/null 2>&1
+/etc/init.d/cron > /dev/null 2>&1
+echo ""
+clear
+findmnt
+echo ""
+echo -ne "\n\033[1;32m Opção \033[1;37m(05) \033[1;32mDefinido !"
+echo ""
+echo ""
+echo ""
+echo -ne "\033[1;37mAperte Enter"; read
+cd /bin/ && mtuning
+   ;;
+06 | 6)
+apt-get install haveged -y > /dev/null 2>&1
+rm -f /etc/default/haveged
+cd /etc/default && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/haveged > /dev/null 2>&1
+cd /etc/default && chmod +x haveged
+service haveged restart > /dev/null 2>&1
+service haveged start > /dev/null 2>&1
+   echo -n > /etc/security/limits.conf
+echo "root soft nproc unlimited" >> /etc/security/limits.conf
+echo "root hard nproc unlimited" >> /etc/security/limits.conf
+echo "root soft nofile 1048576" >> /etc/security/limits.conf
+echo "root hard nofile 1048576" >> /etc/security/limits.conf
+echo "root soft data unlimited" >> /etc/security/limits.conf
+echo "root hard data unlimited" >> /etc/security/limits.conf
+echo "root soft as unlimited" >> /etc/security/limits.conf
+echo "root hard as unlimited" >> /etc/security/limits.conf
+echo "root soft locks unlimited" >> /etc/security/limits.conf
+echo "root hard locks unlimited" >> /etc/security/limits.conf
+echo "root soft stack unlimited" >> /etc/security/limits.conf
+echo "root hard stack unlimited" >> /etc/security/limits.conf
+echo "root soft fsize unlimited" >> /etc/security/limits.conf
+echo "root hard fsize unlimited" >> /etc/security/limits.conf
+echo "root soft memlock unlimited" >> /etc/security/limits.conf
+echo "root hard memlock unlimited" >> /etc/security/limits.conf
+echo "root soft msgqueue unlimited" >> /etc/security/limits.conf
+echo "root hard msgqueue unlimited" >> /etc/security/limits.conf
+echo "root soft sigpending unlimited" >> /etc/security/limits.conf
+echo "root hard sigpending unlimited" >> /etc/security/limits.conf
+echo "root soft priority -11" >> /etc/security/limits.conf
+echo "root hard priority -11" >> /etc/security/limits.conf
+echo "root soft nice -11" >> /etc/security/limits.conf
+echo "root hard nice -11" >> /etc/security/limits.conf
+echo -ne "\n\033[1;32m Opção \033[1;37m(06) \033[1;32mDefinido !"
+echo ""
+echo ""
+echo ""
+echo -ne "\033[1;37mAperte Enter"; read
+cd /bin/ && mtuning
+     ;;
+  07 | 7)
+echo -e "\033[1;33m Buffer/Cache Atual \033[1;37m"
+echo ""
+free -h
+echo -e "\033[0;31m------------------------------------\033[1;37m"
+echo ""
+crontab -u root -l | grep -v '@daily sleep 10s && cd /bin/ && vm'  | crontab -u root -
+cd /bin/ && rm -f vm*
+cd /bin/ && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/vm > /dev/null 2>&1
+cd /bin/ && chmod +x vm
+vm > /dev/null 2>&1
+(crontab -l; echo "@daily sleep 10s && cd /bin/ && vm") | crontab - > /dev/null 2>&1
+/etc/init.d/cron > /dev/null 2>&1
+free -h
+echo -e "\033[0;31m------------------------------------"
+echo ""
+   echo -ne "\n\033[1;32mBuffer/Cache Limpo! Definido Para Auto Limpeza 00:00 Am"
+echo ""
+echo -ne "\n\033[1;32m Opção \033[1;37m(07) \033[1;32mDefinido !"
+echo ""
+echo ""
+echo -ne "\033[1;37mAperte Enter"; read
+cd /bin/ && mtuning
+;;
+08 | 8)
+chattr -i /etc/resolv.conf
+rm /etc/resolv.conf
+echo "options rotate timeout:1 attempts:1 use-vc single-request-reopen edns0" >> /etc/resolv.conf
+echo "search www.google.com" >> /etc/resolv.conf
+echo "nameserver 8.8.8.8" >> /etc/resolv.conf
+echo "nameserver 8.8.4.4" >> /etc/resolv.conf
+chmod +x /etc/resolv.conf
+chattr +i /etc/resolv.conf
+/etc/init.d/networking restart > /dev/null 2>&1
+tcpfast > /dev/null 2>&1
+echo -e "\033[1;33m"
+cat /etc/resolv.conf
+echo ""
+echo -ne "\n\033[1;32m Opção \033[1;37m(08) \033[1;32mDefinido !"
+echo ""
+echo ""
+echo ""
+echo -ne "\033[1;37mAperte Enter"; read
+cd /bin/ && mtuning
+;;
+09 | 9)
+chattr -i /etc/resolv.conf
+rm /etc/resolv.conf
+echo "options rotate timeout:1 attempts:1 use-vc single-request-reopen edns0" >> /etc/resolv.conf
+echo "search www.google.com" >> /etc/resolv.conf
+echo "nameserver 208.67.222.222" >> /etc/resolv.conf
+echo "nameserver 208.67.220.220" >> /etc/resolv.conf
+chmod +x /etc/resolv.conf
+chattr +i /etc/resolv.conf
+/etc/init.d/networking restart > /dev/null 2>&1
+tcpfast > /dev/null 2>&1
+echo -e "\033[1;33m"
+cat /etc/resolv.conf
+echo ""
+echo -ne "\n\033[1;32m Opção \033[1;37m(09) \033[1;32mDefinido !"
+echo ""
+echo ""
+echo ""
+echo -ne "\033[1;37mAperte Enter"; read
+cd /bin/ && mtuning
+;;
+10)
+chattr -i /etc/resolv.conf
+rm /etc/resolv.conf
+echo "options rotate timeout:1 attempts:1 use-vc single-request-reopen edns0" >> /etc/resolv.conf
+echo "search www.google.com" >> /etc/resolv.conf
+echo "nameserver 1.1.1.1" >> /etc/resolv.conf
+echo "nameserver 1.0.0.1" >> /etc/resolv.conf
+chmod +x /etc/resolv.conf
+chattr +i /etc/resolv.conf
+/etc/init.d/networking restart > /dev/null 2>&1
+tcpfast > /dev/null 2>&1
+echo -e "\033[1;33m"
+cat /etc/resolv.conf
+echo ""
+echo -ne "\n\033[1;32m Opção \033[1;37m(10) \033[1;32mDefinido !"
+echo -e "\033[1;33m"
+echo ""
+echo ""
+echo ""
+echo -ne "\033[1;37mAperte Enter"; read
+cd /bin/ && mtuning
+;;
+off | OFF)
+apt-get remove haveged -y > /dev/null 2>&1
+chattr -i /etc/resolv.conf > /dev/null 2>&1
+/etc/init.d/networking restart > /dev/null 2>&1
+echo -n > /etc/sysctl.conf
+echo -n > /etc/security/limits.conf
+crontab -u root -l | grep -v '@reboot sleep 10s && cd /bin/ && rps_cpu'  | crontab -u root -
+crontab -u root -l | grep -v '@reboot sleep 10s && cd /bin/ && tcpfast'  | crontab -u root -
+crontab -u root -l | grep -v '* * * * * ip -s -s neigh flush all'  | crontab -u root -
+crontab -u root -l | grep -v '* * * * * ip neigh flush dev lo'  | crontab -u root -
+crontab -u root -l | grep -v '@daily sleep 10s && cd /bin/ && vm'  | crontab -u root -
+crontab -u root -l | grep -v '@reboot sleep 10s && mount -o remount,noatime,nodiratime,nobarrier auto / && mount -o remount,noatime,nodiratime, auto /dev && mount -o remount,noatime,nodiratime, auto /proc && mount -o remount,noatime,nodiratime, auto /sys && mount -o remount,noatime,nodiratime,nobarrier auto /mnt'  | crontab -u root -
+cd /bin/ && rm -f rps_cpu*
+cd /bin/ && rm -f tcpfast*
+cd /bin/ && rm -f vm*
+cd /bin/ && rm -f acksyshttpack*
+echo -ne "\n\033[1;32mQualquer Ajuste Aplicado, Foi Removido! Reinicie Seu Servidor."
+echo ""
+echo ""
+echo -ne "\033[1;37mAperte Enter"; read
+cd /bin/ && mtuning
+   ;;
+speedtest | SPEEDTEST)
+apt install speedtest-cli -y > /dev/null 2>&1
+echo -e "---------"
+echo -ne "\n\033[1;33mBuffer Tcp Atual: \033[1;37m"
+cat /proc/sys/net/ipv4/tcp_rmem
+echo ""
+echo -e "---------\033[1;37m"
+echo ""
+speedtest --simple
+echo ""
+echo ""
+echo -ne "\033[1;37mAperte Enter"; read
+echo -e "---------"
+cd /bin/ && mtuning
+;;
+menu | MENU)
+menu
+;;
+exit | EXIT)
+clear
+exit
+;;
+   *)
+esac
+clear
+cd /bin/ && mtuning
+#fim
+
+

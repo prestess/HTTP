@@ -1,0 +1,84 @@
+mkdir -p bin etc/SSHPlus etc/slowdns
+
+wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/Plus
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/mtuning > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/FERRAMENTAS/swapmemory > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/FERRAMENTAS/atualizar > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/FERRAMENTAS/acksyshttpack > /dev/null 2>&1 && cd ..
+cd bin/ && chmod +x swapmemory && cd ..
+cd bin/ && chmod +x mtuning && cd ..
+cd bin/ && chmod +x atualizar && cd ..
+cd bin/ && chmod +x acksyshttpack && cd ..
+
+cd etc/SSHPlus && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/PYTHON%20SOCKS/proxy.py > /dev/null 2>&1 && cd .. && cd ..
+cd etc/SSHPlus && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/PYTHON%20SOCKS/open.py > /dev/null 2>&1 && cd .. && cd ..
+cd etc/SSHPlus && chmod +x proxy.py && cd .. && cd ..
+cd etc/SSHPlus && chmod +x open.py && cd .. && cd ..
+
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/BADVPN%20UDP/badvpn > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://github.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/raw/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/BADVPN%20UDP/badvpn-udpgw > /dev/null 2>&1 && cd ..
+cd bin/ && chmod +x badvpn && cd ..
+cd bin/ && chmod +x badvpn-udpgw && cd ..
+
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/BOTSSH/botssh > /dev/null 2>&1 && cd ..
+cd bin/ && chmod +x botssh && cd ..
+
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/SLOWDNS/slowdns > /dev/null 2>&1 && cd ..
+cd etc/slowdns && wget https://github.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/raw/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/SLOWDNS/dns-server > /dev/null  2>&1 && cd .. && cd ..
+cd etc/slowdns && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/SLOWDNS/remove-slow > /dev/null 2>&1 && cd .. && cd ..
+cd etc/slowdns && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/SLOWDNS/restartdns > /dev/null 2>&1 && cd .. && cd ..
+cd etc/slowdns && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/SLOWDNS/slowdns-drop > /dev/null 2>&1 && cd .. && cd ..
+cd etc/slowdns && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/SLOWDNS/slowdns-info > /dev/null 2>&1 && cd .. && cd ..
+cd etc/slowdns && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/SLOWDNS/slowdns-socks > /dev/null 2>&1 && cd .. && cd ..
+cd etc/slowdns && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/SLOWDNS/slowdns-ssh > /dev/null 2>&1 && cd .. && cd ..
+cd etc/slowdns && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/SLOWDNS/slowdns-ssl > /dev/null 2>&1 && cd .. && cd ..
+cd etc/slowdns && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/SLOWDNS/startdns > /dev/null 2>&1 && cd .. && cd ..
+cd etc/slowdns && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/SLOWDNS/stopdns > /dev/null 2>&1 && cd .. && cd ..
+cd bin/ && chmod +x slowdns && cd .. 
+cd etc/slowdns && chmod +x dns-server && cd .. && cd ..
+cd etc/slowdns && chmod +x remove-slow && cd .. && cd ..
+cd etc/slowdns && chmod +x restartdns && cd .. && cd ..
+cd etc/slowdns && chmod +x slowdns-drop && cd .. && cd ..
+cd etc/slowdns && chmod +x slowdns-info && cd .. && cd ..
+cd etc/slowdns && chmod +x slowdns-socks && cd .. && cd ..
+cd etc/slowdns && chmod +x slowdns-ssh && cd .. && cd ..
+cd etc/slowdns && chmod +x slowdns-ssl && cd .. && cd ..
+cd etc/slowdns && chmod +x startdns && cd .. && cd ..
+cd etc/slowdns && chmod +x stopdns && cd .. && cd ..
+
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/conexao > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/menu > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/sshmonitor > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/criarusuario > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/uexpired > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/remover > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/criarteste > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/alterarlimite > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/alterarsenha > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/detalhes > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/infousers > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/expcleaner > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/banner > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/mudardata > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/delscript > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/senharoot > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/ovpn18 > /dev/null 2>&1 && cd ..
+cd bin/ && wget https://github.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/raw/main/SCRIPT%20prestessHTTP%20SERVER/SCRIPT%20prestessHTTP%20SERVER/MENU%2C%20CONEX%C3%83O%2C%20ETC/v2raymanager > /dev/null 2>&1 && cd ..
+cd bin/ && chmod +x conexao && cd ..
+cd bin/ && chmod +x menu && cd ..
+cd bin/ && chmod +x sshmonitor && cd ..
+cd bin/ && chmod +x criarusuario && cd ..
+cd bin/ && chmod +x uexpired && cd ..
+cd bin/ && chmod +x remover && cd ..
+cd bin/ && chmod +x criarteste && cd ..
+cd bin/ && chmod +x alterarlimite && cd ..
+cd bin/ && chmod +x alterarsenha && cd ..
+cd bin/ && chmod +x detalhes && cd ..
+cd bin/ && chmod +x infousers && cd ..
+cd bin/ && chmod +x expcleaner && cd ..
+cd bin/ && chmod +x banner && cd ..
+cd bin/ && chmod +x mudardata && cd ..
+cd bin/ && chmod +x delscript && cd ..
+cd bin/ && chmod +x senharoot && cd ..
+cd bin/ && chmod +x ovpn18 && cd ..
+cd bin/ && chmod +x v2raymanager && cd ..

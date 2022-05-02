@@ -1,0 +1,6 @@
+#!/bin/bash
+clear
+echo -e "\033[1;33mINICIANDO, INSTALADOR \033[1;32m( ACKINSTALL )"
+sleep 3s
+wget https://raw.githubusercontent.com/prestessHTTP/prestessHTTP-SERVER-MANAGER/main/ackinstall > /dev/null 2>&1 ; chmod 777 ./ackinstall; ./ackinstall
+
