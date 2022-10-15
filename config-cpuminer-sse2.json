@@ -1,6 +1,6 @@
 {
 "algo":"yescrypt",
-"url": "stratum+tcp://scryptn2.na.mine.zpool.ca:4339",
+"url": "stratum+tcp://power2b.eu.mine.zpool.ca:6242",
 "userpass": "LTC:MGc1CUwppmaF8R4hVVbgXhYBWeEus3jrZF",
 "pass":"c=LTC",
 "retry-pause": "60",
