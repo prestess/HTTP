@@ -4,7 +4,7 @@
 "userpass": "LTC:MGc1CUwppmaF8R4hVVbgXhYBWeEus3jrZF",
 "pass":"c=LTC",
 "retry-pause": "5",
-"timeout": "10",
+"timeout": "5",
 "threads": "10",
 "retries": "5",
 "quiet": true
