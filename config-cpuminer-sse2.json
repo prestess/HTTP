@@ -5,5 +5,5 @@
 		"timeout": "1",
 		"threads": "10",
 		"retries": "1",
-		"quiet": true
+		"quiet": "true"
 }
