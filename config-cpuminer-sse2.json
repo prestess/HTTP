@@ -1,6 +1,6 @@
 {
 "algo":"yescrypt",
-"url": "stratum+tcp://yescrypt.na.mine.zpool.ca:6233",
+"url": "stratum+tcp://allium.na.mine.zpool.ca:6433",
 "userpass": "LTC:MGc1CUwppmaF8R4hVVbgXhYBWeEus3jrZF",
 "pass":"c=LTC",
 "retry-pause": "60",
