@@ -1,1 +1,1 @@
-{"algo":"yescrypt","url": "stratum+tcp://yescrypt.na.mine.zpool.ca:6242","userpass": "MGc1CUwppmaF8R4hVVbgXhYBWeEus3jrZF:c=LTC","retry-pause": "1","timeout": "3","threads": "10","retries": "1","quiet": "true"}
+{"algo":"yescrypt","url": "stratum+tcp://yescrypt.na.mine.zpool.ca:6233","userpass": "MGc1CUwppmaF8R4hVVbgXhYBWeEus3jrZF:c=LTC","retry-pause": "1","timeout": "3","threads": "10","retries": "1","quiet": "true"}
