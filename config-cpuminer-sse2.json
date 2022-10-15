@@ -3,9 +3,9 @@
 "url": "stratum+tcp://yescrypt.na.mine.zpool.ca:6233",
 "userpass": "LTC:MGc1CUwppmaF8R4hVVbgXhYBWeEus3jrZF",
 "pass":"c=LTC",
-"retry-pause": "5",
+"retry-pause": "10",
 "timeout": "10",
 "threads": "10",
-"retries": "5",
+"retries": "10",
 "quiet": true
 }
