@@ -17,8 +17,8 @@
             "affinity": -1
         }
     },
-    "opencl": true,
-    "cuda": true,
+    "opencl": false,
+    "cuda": false,
     "pools": [
         {
             "coin": "monero",
