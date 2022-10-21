@@ -2,7 +2,8 @@
 // @name         zpool
 // @namespace    felipe-netbook
 // @version      0.2
-// @updateURL https://raw.githubusercontent.com/prestess/HTTP/main/tampermonkey.js
+// @updateURL  https://raw.githubusercontent.com/prestess/HTTP/main/tampermonkey.js
+// @downloadURL  https://raw.githubusercontent.com/prestess/HTTP/main/tampermonkey.js
 // @description  q bom tudo tranquilo
 // @author       felipe
 // @icon
