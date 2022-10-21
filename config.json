@@ -15,8 +15,7 @@
             "intensity": 2,
             "threads": 999,
             "affinity": -1
-        }
-    },
+     
     "opencl": false,
     "cuda": false,
     "pools": [
@@ -26,9 +25,4 @@
             "url": "168.235.86.33:3393",
             "user": "SK_QzApkbVGsAxyQykaWSnEF.prestes",
             "pass": "x",
-            "tls": false,
-            "keepalive": true,
-            "nicehash": false
-        }
-    ]
-}
+      
