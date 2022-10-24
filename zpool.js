@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         zpool
 // @namespace    felipe-netbook
-// @version      0.2
+// @version      0.3
 // @updateURL   https://raw.githubusercontent.com/prestess/HTTP/main/zpool.js
 // @downloadURL   https://raw.githubusercontent.com/prestess/HTTP/main/zpool.js
 // @description  q bom tudo tranquilo
