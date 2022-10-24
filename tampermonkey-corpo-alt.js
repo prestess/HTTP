@@ -20,10 +20,10 @@ verif=endereco.match(/invertexto\.com\/netbook/gi);
 if(verif!=null)
 (function() {
     'use strict';
-/*setInterval(()=>{
+setInterval(()=>{
 	if(document.hasFocus()) window.open(site_endereco,"_blank");
-},(Math.floor(Math.random() * 15) + 6000));*/
-setTimeout(()=>{window.open(site_endereco,"_blank");},5000);
+},(Math.floor(Math.random() * 15) + 6000));
+//setTimeout(()=>{window.open(site_endereco,"_blank");},5000);
 })();
 //************
 verif=0;
