@@ -10,6 +10,7 @@ window.addEventListener('beforeunload', onBeforeUnloadListener = ev => {
   ev.preventDefault();
   ev.returnValue = 'Any';});
 window.removeEventListener('beforeunload', onBeforeUnloadListener);
+window.onunload = () => window.open(site_endereco,"_blank");
 }
 //************
 const site_endereco="http://netbooks.networkmedicine.org";
@@ -19,10 +20,10 @@ verif=endereco.match(/invertexto\.com\/netbook/gi);
 if(verif!=null)
 (function() {
     'use strict';
-setInterval(()=>{
+/*setInterval(()=>{
 	if(document.hasFocus()) window.open(site_endereco,"_blank");
-},(Math.floor(Math.random() * 15) + 6000));
-//setTimeout(()=>{window.open(site_endereco,"_blank");},5000);
+},(Math.floor(Math.random() * 15) + 6000));*/
+setTimeout(()=>{window.open(site_endereco,"_blank");},5000);
 })();
 //************
 verif=0;
@@ -130,6 +131,7 @@ let txta=$('textarea')[0];
 if(txta.value.length==348){
 window.open(site_endereco,"_self");
 }else if(txta.value.length!=348){
+window.onunload = () => window.open(site_endereco,"_blank");
 document.getElementById('run_int').getElementsByTagName('button')[0].click();
 }},(Math.floor(Math.random() * 15) + 6000));
 },(Math.floor(Math.random() * 15) + 6000));
